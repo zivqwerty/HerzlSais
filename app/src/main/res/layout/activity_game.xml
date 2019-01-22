@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GameActivity"
+    android:orientation="vertical"
+    android:gravity="center">
+
+
+    <TextView
+        android:id="@+id/level"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Level: 0"
+        android:textSize="48dp"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:layout_marginBottom="24dp"
+        android:layout_marginTop="-64dp"
+        android:textAlignment="center"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+
+        <Button
+            android:id="@+id/redButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="red"
+            android:width="144dp"
+            android:height="144dp"
+            android:backgroundTint="#5D0D0D"
+            />
+
+        <Button
+            android:id="@+id/greenButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="green"
+            android:width="144dp"
+            android:height="144dp"
+            android:backgroundTint="#264220"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+
+        <Button
+            android:id="@+id/yellowButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="yellow"
+            android:width="144dp"
+            android:height="144dp"
+            android:backgroundTint="#6D4A00"/>
+
+        <Button
+            android:id="@+id/blueButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="blue"
+            android:width="144dp"
+            android:height="144dp"
+            android:backgroundTint="#1A1A42"
+            />
+
+
+    </LinearLayout>
+
+</LinearLayout>
