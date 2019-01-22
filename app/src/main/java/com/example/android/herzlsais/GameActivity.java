@@ -38,62 +38,64 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
 
     protected void run() {
         SimonGame game = new SimonGame();
-        while (game.isRunning) {
+
             for (int i = 0; i < 5; i++)
                 game.addToSequence();
 
-            playGameSequnce(game);
-            return;
-        }
+            playGameSequence(game);
+
+
 
     }
 
-    void playGameSequnce(SimonGame game) {
+    void playGameSequence(SimonGame game) {
+
         game.gameSequnce.add(SimonGame.Color.none);
 
         while (!game.gameSequnce.peek().equals(SimonGame.Color.none)) {
 
             if (game.gameSequnce.peek().equals(SimonGame.Color.red)) {
                 red.setBackgroundColor(Color.rgb(255, 76, 76));
-                try {
+                /*try {
                     wait(500);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
-                }
+                }*/
                 red.setBackgroundColor(Color.rgb(93, 13, 13));
 
 
             } else if (game.gameSequnce.peek().equals(SimonGame.Color.green)) {
                 green.setBackgroundColor(Color.rgb(102, 255, 51));
-                try {
+                /*try {
                     wait(500);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
-                }
+                }*/
                 green.setBackgroundColor(Color.rgb(38, 66, 32));
 
 
             } else if (game.gameSequnce.peek().equals(SimonGame.Color.yellow)) {
                 yellow.setBackgroundColor(Color.rgb(255, 245, 58));
-                try {
+                /*try {
                     wait(500);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
-                }
+                }*/
                 yellow.setBackgroundColor(Color.rgb(109, 74, 0));
 
             } else if (game.gameSequnce.peek().equals(SimonGame.Color.blue)) {
-                yellow.setBackgroundColor(Color.rgb(255, 245, 58));
-                try {
+                blue.setBackgroundColor(Color.rgb(255, 245, 58));
+                /*try {
                     wait(500);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
-                }
-                yellow.setBackgroundColor(Color.rgb(109, 74, 0));
+                }*/
+                blue.setBackgroundColor(Color.rgb(109, 74, 0));
             }
 
 
         }
+        game.gameSequnce.remove();
 
 
     }
